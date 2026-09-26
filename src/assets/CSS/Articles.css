@@ -1,0 +1,146 @@
+/* ============================================
+   WellFit Articles Styles
+   ============================================ */
+
+/* Article Card Grid */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: var(--space-3) !important;
+  transition: transform var(--duration-normal) var(--ease-spring),
+              box-shadow var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) ease;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+.article-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
+  background: var(--color-surface-alt);
+  display: block;
+}
+
+.article-card-title {
+  font-size: 1.12rem;
+  color: var(--color-ink);
+  line-height: 1.35;
+  margin-bottom: var(--space-2);
+  transition: color var(--duration-fast) ease;
+}
+
+.article-card:hover .article-card-title {
+  color: var(--color-accent);
+}
+
+.article-card-date {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-dim);
+  margin-top: auto;
+}
+
+/* Article Detail Reader */
+.article-reader-container {
+  max-width: 780px !important;
+}
+
+.article-cover-hero {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.article-reader-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+.article-body {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.article-body p {
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.article-body h2 {
+  font-size: 1.45rem;
+  color: var(--color-ink);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.article-body h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+.article-body h3 {
+  font-size: 1.2rem;
+  color: var(--color-ink);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.article-body strong {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.article-body em {
+  color: var(--color-text-dim);
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-surface-alt);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: var(--space-4) 0;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.4rem;
+  margin-bottom: var(--space-4);
+}
+
+.article-body li {
+  margin-bottom: 6px;
+  color: var(--color-text);
+}

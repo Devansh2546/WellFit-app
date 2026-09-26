@@ -1,0 +1,193 @@
+/* ============================================
+   WellFit Calculators Styles (BMI & 1RM)
+   ============================================ */
+
+.calculator-container {
+  max-width: 680px !important;
+}
+
+.calc-card {
+  padding: var(--space-4) !important;
+  margin-top: var(--space-3);
+}
+
+.calc-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.calc-full-width {
+  grid-column: 1 / -1;
+}
+
+.calc-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.calc-error {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+/* Result Presentation */
+.calc-result-card {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  animation: calc-result-in 0.35s var(--ease-spring);
+}
+
+@keyframes calc-result-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calc-result-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.calc-value-display {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.calc-value-display .stat-hero {
+  font-family: var(--font-mono);
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1;
+}
+
+.calc-value-unit {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-dim);
+  font-weight: 600;
+}
+
+.calc-category-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Gauge Bar (BMI) */
+.bmi-gauge-track {
+  position: relative;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    to right,
+    #38BDF8 0%,
+    #38BDF8 23.2%,
+    #34D399 23.2%,
+    #34D399 46.4%,
+    #FBBF24 46.4%,
+    #FBBF24 64.3%,
+    #F87171 64.3%,
+    #F87171 100%
+  );
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.bmi-gauge-marker {
+  position: absolute;
+  top: -5px;
+  width: 6px;
+  height: 24px;
+  background: var(--color-ink);
+  border: 2px solid var(--color-surface);
+  border-radius: 3px;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: left 0.4s var(--ease-spring);
+}
+
+.bmi-legend {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: var(--space-2);
+  text-align: center;
+}
+
+.bmi-legend-item {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+}
+
+.bmi-legend-item strong {
+  display: block;
+  font-size: 0.72rem;
+}
+
+/* Form Tips Card (1RM) */
+.form-tips-card {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.form-tips-title {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 520px) {
+  .calc-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .calc-actions button {
+    width: 100%;
+  }
+
+  .bmi-legend {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}

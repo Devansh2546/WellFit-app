@@ -1,0 +1,104 @@
+/* ============================================
+   WellFit Authentication (Login / Sign Up)
+   ============================================ */
+
+.login-container {
+  max-width: 440px !important;
+}
+
+.login-card {
+  padding: var(--space-5) var(--space-4) !important;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.login-header-group {
+  margin-bottom: var(--space-4);
+}
+
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-1);
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+  margin: 0;
+}
+
+.login-google-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  padding: 11px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.login-google-btn:hover {
+  background: var(--color-surface-alt);
+  border-color: var(--color-text-dim);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-line);
+}
+
+.login-field {
+  margin-bottom: var(--space-3);
+}
+
+.login-field input {
+  padding: 11px 14px;
+}
+
+.login-error-msg {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  margin-bottom: var(--space-3);
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  margin-top: var(--space-2);
+}
+
+.login-switch-btn {
+  width: 100%;
+  margin-top: var(--space-3);
+  padding: 10px 16px;
+  font-size: 0.88rem;
+}
