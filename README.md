@@ -2,7 +2,7 @@
 
 A full-stack fitness platform built with React, TypeScript, and Supabase — workout tutorials, nutrition-tracked recipes, fitness calculators, and an AI assistant that actually stays on topic.
 
-**[Live Demo](#)** &middot; **[Report a Bug](#)**
+**[Live Demo](https://wellfit-fitness.vercel.app/)** &middot; **[Report a Bug](devansht2546@gmail.com)**
 
 ---
 
